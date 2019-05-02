@@ -1,0 +1,6 @@
+{
+    "connectionString":"mongodb://localhost:27017/ProjetoTutorial",
+    "version":"1.0.0.",
+    "port":"6000",
+    "secret": "Crud_Web_n1b2"
+    }

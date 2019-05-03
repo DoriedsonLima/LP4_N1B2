@@ -10,19 +10,21 @@ var bodyParser=require('body-parser');
 var config = require('config.json');
 
 //criação da API
-var api = express();
+var app = express();
 
 //decoder para parametros passados pela url
-api.use(bodyParser.urlencoded({extended:false}));
-//biblioteca para receber as requisições em json
-api.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 
-//api.use('/api'); //continuar aqui - programar API 
+//biblioteca para receber as requisições em json
+app.use(bodyParser.json());
+
+//pagina estática
+app.use('/',express.static('app')); //continuar aqui - programar API 
 
 //Porta para api
-var apiPort = 8092;
+var appPort = 8092;
 
 //inicia servidor para api "ouvir a porta especificada" 
-var serverApi = api.listen(apiPort, function(){
+var serverApi = app.listen(appPort, function(){
     console.log('Server API listening at http://' + serverApi.address().address + ':' + serverApi.address().port);
 })

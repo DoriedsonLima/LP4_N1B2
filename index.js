@@ -1,6 +1,10 @@
 //biblioteca js para mapeamento das pastas do server.js
 require('rootpath')();
 
+//biblioteca bootstrap
+//var jQuery=require('jquery');
+//var bootstrap=require('bootstrap');
+
 //inicializa o node express
 var express=require('express');
 //bibliotexa parse de mensagens requisitadas que contem JSON
@@ -22,7 +26,7 @@ app.use(bodyParser.json());
 app.use('/',express.static('app')); //continuar aqui - programar API 
 
 //Porta para api
-var appPort = 8092;
+var appPort = 8050;
 
 //inicia servidor para api "ouvir a porta especificada" 
 var serverApi = app.listen(appPort, function(){
